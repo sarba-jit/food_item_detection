@@ -1,1 +1,18 @@
+FOOD ITEM DETECTION
+(using openCV2--Python2)
+
 This work is a part of a project used to identify the food items in a elementary school students' meal plate.
+
+The algorithm is as follows:
+1. Find the region of interest (for e.g. in this case it is sauce)
+2. Input the test image where sauce is to be detected
+3. Convert both the test image and the ROI image to HSV 
+4. Calculate the corresponding histograms
+5. Normalize the histogram and apply back projection
+6. Then convolute with circular disc
+7. Determine a feasible threshold and do a binary AND
+8. Convert the resulatnt image to GRAYSCALE
+9. Determine the contours in the image and select the largest one
+10. Find the corresponding MAX and MIN points in the largest contour (this is done to find the starting point of the corresponding object to be detected and also the height and width of the bounding box)
+11. Determine a stopping criteria to be used as an argument to MEAN SHIFT FILTER
+12. Apply MEAN SHIFT FILTER and generate the corresponding result.
