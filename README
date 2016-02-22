@@ -14,5 +14,8 @@ The algorithm is as follows:
 8. Convert the resulatnt image to GRAYSCALE
 9. Determine the contours in the image and select the largest one
 10. Find the corresponding MAX and MIN points in the largest contour (this is done to find the starting point of the corresponding object to be detected and also the height and width of the bounding box)
-11. Determine a stopping criteria to be used as an argument to MEAN SHIFT FILTER
-12. Apply MEAN SHIFT FILTER and generate the corresponding result.
+11. From the returned contour values, find the contours which have lengths more than 1350 (this is basically done to neglect the false positive images)
+12. Determine a stopping criteria to be used as an argument to MEAN SHIFT FILTER
+13. Apply MEAN SHIFT FILTER and generate the corresponding result.
+14. AN example of resultant figures is given.
+
